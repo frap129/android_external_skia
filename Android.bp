@@ -852,7 +852,7 @@ cc_library {
         "libwebp-decode",
         "libwebp-encode",
     ],
-    proprietary_whole_static_libs: [
+    qti_whole_static_libs: [
         "libqc-skia",
     ],
 }
