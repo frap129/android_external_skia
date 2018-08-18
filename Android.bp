@@ -907,6 +907,7 @@ cc_library_static {
 
     defaults: ["skia_deps",
                "skia_pgo",
+               "skia_android",
     ],
 }
 
@@ -978,6 +979,16 @@ cc_defaults {
     cflags: [
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
+    ],
+}
+
+cc_defaults {
+    name: "skia_android",
+    sdk_version: "current",
+    cflags: [
+        "-DANDROID",
+        "-DSK_BUILD_FOR_ANDROID",
+        "-DSK_BUILD_FOR_ANDROID_FRAMEWORK",
     ],
 }
 
